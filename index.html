@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periksa PC · KOMPAK</title>
+  <meta name="description" content="KOMPAK: Sistem Pakar Forward Chaining untuk Menganalisis Kelayakan Komputer Praktikum Laboratorium.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234F46E5'/%3E%3Ctext x='16' y='23' font-size='20' font-weight='800' text-anchor='middle' font-family='sans-serif' fill='%23fff'%3EK%3C/text%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons (Offline Local) -->
+  <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Professional KOMPAK Design System -->
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <a class="lewati" href="#utama">Lewati ke konten utama</a>
+
+  <!-- =========================================================================
+       APP HEADER & NAVIGATION
+       ========================================================================= -->
+  <header class="app-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-box" aria-label="Beranda KOMPAK">
+        <div class="brand-icon">
+          <i class="ri-computer-line"></i>
+        </div>
+        <div class="brand-text-group">
+          <div class="brand-title-wrap">
+            <span class="brand-name">KOMPAK</span>
+            <span class="brand-badge">v2.4 PRO</span>
+          </div>
+          <p class="brand-subtitle">Analisis Kelayakan Komputer Praktikum</p>
+        </div>
+      </a>
+
+      <!-- Center Navigation Tabs -->
+      <nav class="nav-tab-wrapper" aria-label="Navigasi Utama">
+        <ul class="menu-tab">
+          <li class="menuitem-active">
+            <a href="#diagnosa" data-tab="diagnosa" class="aktif" aria-current="page">
+              <i class="ri-dashboard-3-line"></i>
+              <span>Periksa PC</span>
+            </a>
+          </li>
+          <li>
+            <a href="#basis" data-tab="basis">
+              <i class="ri-book-open-line"></i>
+              <span>Basis Pengetahuan</span>
+            </a>
+          </li>
+          <li>
+            <a href="#pengujian" data-tab="pengujian">
+              <i class="ri-test-tube-line"></i>
+              <span>Pengujian AI</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Right Meta -->
+      <div class="header-right">
+        <div class="engine-status-pill" title="Mesin Forward Chaining 12 Aturan siap memproses fakta">
+          <span class="status-dot-pulse"></span>
+          <span>Forward Chaining Siap</span>
+        </div>
+        <div class="academic-badge">
+          <span>Teknik Komputer UNM</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================= -->
+  <main class="main-wrapper" id="utama" tabindex="-1">
+
+    <!-- Page Header & Breadcrumb -->
+    <div class="page-header">
+      <div class="page-title-group">
+        <h1 id="judul-halaman">Periksa PC</h1>
+        <p class="page-subtitle">Sistem pakar penalaran maju (forward chaining) untuk evaluasi kelayakan PC praktikum laboratorium.</p>
+      </div>
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="#diagnosa" data-tab="diagnosa">KOMPAK</a>
+        <span class="breadcrumb-separator">/</span>
+        <span id="remah-halaman">Periksa PC</span>
+      </nav>
+    </div>
+
+    <!-- =========================================================================
+         HALAMAN 1: DIAGNOSA & PEMERIKSAAN PC
+         ========================================================================= -->
+    <section id="tab-diagnosa" class="panel-tab aktif" aria-labelledby="judul-halaman">
+      
+      <!-- MODE DEMO / PRESET UJI CEPAT (UX HIGHLIGHT) -->
+      <div class="demo-quick-bar">
+        <div class="demo-header">
+          <div class="demo-title-wrap">
+            <span class="badge-demo"><i class="ri-flashlight-line"></i> MODE DEMO</span>
+            <h3 class="demo-heading">Uji Cepat Skenario Evaluasi</h3>
+          </div>
+          <span class="demo-sub">Klik skenario di bawah untuk mengisi fakta secara instan ke mesin inferensi:</span>
+        </div>
+
+        <div class="demo-preset-pills">
+          <button type="button" class="preset-pill preset-k1" data-skenario="S1" title="Semua 10 indikator dalam kondisi normal (Aturan R12)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S1</span>
+            <span class="pill-label">Semua Normal (K1)</span>
+          </button>
+          <button type="button" class="preset-pill preset-k2" data-skenario="S2" title="Sisa ruang drive C: kurang dari 20 GB (Aturan R10)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S2</span>
+            <span class="pill-label">Drive C &lt; 20GB (K2)</span>
+          </button>
+          <button type="button" class="preset-pill preset-k3" data-skenario="S3" title="Komputer gagal booting (Aturan R1)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S3</span>
+            <span class="pill-label">Gagal Booting (K3)</span>
+          </button>
+          <button type="button" class="preset-pill preset-k3" data-skenario="S4" title="Software praktikum belum terpasang (Aturan R6)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S4</span>
+            <span class="pill-label">Tanpa Aplikasi (K3)</span>
+          </button>
+          <button type="button" class="preset-pill preset-k4" data-skenario="S5" title="RAM di bawah kebutuhan dan booting lambat (Aturan R8)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S5</span>
+            <span class="pill-label">RAM Kurang + Lambat (K4)</span>
+          </button>
+          <button type="button" class="preset-pill preset-k3" data-skenario="S7" title="Konflik prioritas: RAM kurang + Virus terdeteksi (R7 menang atas R8)">
+            <span class="pill-dot"></span>
+            <span class="pill-code">S7</span>
+            <span class="pill-label">Virus Terdeteksi (K3)</span>
+          </button>
+        </div>
+
+        <div class="demo-footer">
+          <label class="demo-select-label" for="pilih-contoh">
+            <span>Daftar Skenario Lengkap:</span>
+            <select id="pilih-contoh" class="form-select-sm">
+              <option value="">— Pilih skenario uji (S1–S10) —</option>
+            </select>
+          </label>
+          <button type="button" id="tombol-normal" class="btn-ghost-sm">
+            <i class="ri-check-double-line"></i> Set Semua Normal
+          </button>
+        </div>
+      </div>
+
+      <!-- Banner Otomatis Demo -->
+      <div id="banner-otomatis" class="banner-otomatis" role="note" hidden>
+        <i class="ri-information-line" aria-hidden="true"></i>
+        <p><b>Isian terisi otomatis dari mode demo.</b> Untuk pemeriksaan fisik riil di laboratorium, pastikan setiap opsi sesuai dengan kondisi pengamatan langsung pada unit komputer.</p>
+      </div>
+
+      <!-- Tata Letak 2 Kolom: Formulir Pemeriksaan & Panel Hasil -->
+      <div class="tata">
+        
+        <!-- KOLOM KIRI: FORMULIR INPUT INDIKATOR -->
+        <form id="formulir" class="formulir" novalidate>
+          
+          <!-- Kartu Identitas PC -->
+          <div class="card-box pc-identity-card">
+            <div class="card-box-body">
+              <div class="input-label-header">
+                <label class="input-label-title" for="nomor-pc">
+                  <i class="ri-computer-line"></i>
+                  <span>Nomor / Label PC Laboratorium</span>
+                </label>
+                <span class="input-badge-optional">Opsional</span>
+              </div>
+              <div class="input-field-wrapper">
+                <i class="ri-hashtag field-icon" aria-hidden="true"></i>
+                <input id="nomor-pc" class="input-pc-modern" type="text" autocomplete="off" placeholder="contoh: PC-07 Lab Jaringan &amp; AI" autofocus>
+              </div>
+            </div>
+          </div>
+
+          <!-- Wadah Indikator yang Terstruktur -->
+          <div>
+            <h2 class="sr-only">Daftar Indikator Pemeriksaan</h2>
+            <div id="daftar-indikator" class="daftar-indikator"></div>
+          </div>
+
+          <!-- Sticky Bottom Action Dock -->
+          <div class="bar-aksi">
+            <div class="progres">
+              <div class="progres-info-row">
+                <span id="teks-progres" class="progres-teks">0 dari 10 indikator terisi</span>
+                <span id="progres-persen" class="progres-persen">0%</span>
+              </div>
+              <div class="progres-bar" aria-hidden="true">
+                <i id="isi-progres"></i>
+              </div>
+            </div>
+            <div class="tombol-grup">
+              <button type="reset" class="tombol ghost" title="Bersihkan semua opsi yang dipilih">
+                <i class="ri-refresh-line"></i>
+                <span>Kosongkan</span>
+              </button>
+              <button type="submit" class="tombol utama" id="btn-periksa">
+                <i class="ri-search-eye-line"></i>
+                <span>Periksa Kelayakan</span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+        <!-- KOLOM KANAN: PANEL HASIL DIAGNOSIS REAL-TIME -->
+        <aside id="hasil" class="hasil belum" aria-label="Hasil Pemeriksaan Forward Chaining">
+          <div id="peringatan-basi" class="peringatan-basi" hidden>
+            <i class="ri-alert-line" aria-hidden="true"></i>
+            <p>Isian indikator telah diubah sejak analisis terakhir. Tekan <b>Periksa Kelayakan</b> untuk memperbarui kesimpulan.</p>
+          </div>
+          <div id="isi-hasil"></div>
+        </aside>
+
+        <p id="pengumuman" class="sr-only" role="status" aria-live="polite"></p>
+      </div>
+
+      <!-- =========================================================================
+           RIWAYAT PEMERIKSAAN SESI INI & METRIK STATISTIK
+           ========================================================================= -->
+      <section id="riwayat" class="card-box riwayat" hidden aria-labelledby="judul-riwayat">
+        <div class="card-box-body">
+          
+          <div class="riwayat-header">
+            <div>
+              <h3 id="judul-riwayat">Riwayat Pemeriksaan Sesi Ini</h3>
+              <p>Tersimpan secara lokal selama halaman dibuka. Ekspor ke berkas CSV untuk pelaporan inventaris laboratorium.</p>
+            </div>
+            <div class="tombol-grup">
+              <button type="button" id="ekspor-csv" class="tombol sekunder">
+                <i class="ri-download-2-line"></i>
+                <span>Ekspor CSV</span>
+              </button>
+              <button type="button" id="hapus-riwayat" class="tombol ghost">
+                <i class="ri-delete-bin-line"></i>
+                <span>Hapus Riwayat</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Ringkasan Metrik Sesi -->
+          <div class="riwayat-stats-row">
+            <div class="stat-chip">
+              <div class="stat-chip-icon blue"><i class="ri-computer-line"></i></div>
+              <div class="stat-chip-content">
+                <span class="stat-chip-val" id="stat-total-pc">0</span>
+                <span class="stat-chip-lbl">Total Diperiksa</span>
+              </div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-chip-icon green"><i class="ri-checkbox-circle-line"></i></div>
+              <div class="stat-chip-content">
+                <span class="stat-chip-val" id="stat-k1">0</span>
+                <span class="stat-chip-lbl">Layak Pakai (K1)</span>
+              </div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-chip-icon amber"><i class="ri-error-warning-line"></i></div>
+              <div class="stat-chip-content">
+                <span class="stat-chip-val" id="stat-k2">0</span>
+                <span class="stat-chip-lbl">Perlu Catatan (K2)</span>
+              </div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-chip-icon red"><i class="ri-close-circle-line"></i></div>
+              <div class="stat-chip-content">
+                <span class="stat-chip-val" id="stat-k3">0</span>
+                <span class="stat-chip-lbl">Tidak Layak (K3/K4)</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="tabel-riwayat"></div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- =========================================================================
+         HALAMAN 2: BASIS PENGETAHUAN & RESOLUSI KONFLIK
+         ========================================================================= -->
+    <section id="tab-basis" class="panel-tab knowledge-section" aria-labelledby="judul-halaman">
+      
+      <!-- Visualisasi Resolusi Konflik -->
+      <div class="card-box">
+        <div class="card-box-body">
+          <div class="priority-flow-card">
+            <h4 class="priority-flow-title">
+              <i class="ri-shield-keyhole-line"></i>
+              <span>Hierarki Resolusi Konflik (Conflict Resolution Hierarchy)</span>
+            </h4>
+            <p class="category-desc" style="margin-bottom: 14px;">Bila fakta di memori kerja memicu beberapa aturan dengan kesimpulan berbeda, mesin inferensi memilih kesimpulan dengan tingkat urgensi tertinggi:</p>
+            <div class="priority-ladder">
+              <div class="ladder-step" style="border-color: var(--status-k3); background: var(--status-k3-bg);">
+                <span class="label merah"><i class="ri-close-circle-line"></i> K3</span>
+                <span><b>Prioritas 4</b> · Rusak/Kritis</span>
+              </div>
+              <span class="ladder-arrow">›</span>
+              <div class="ladder-step" style="border-color: var(--status-k4); background: var(--status-k4-bg);">
+                <span class="label ungu"><i class="ri-refresh-line"></i> K4</span>
+                <span><b>Prioritas 3</b> · Peremajaan</span>
+              </div>
+              <span class="ladder-arrow">›</span>
+              <div class="ladder-step" style="border-color: var(--status-k2); background: var(--status-k2-bg);">
+                <span class="label kuning"><i class="ri-error-warning-line"></i> K2</span>
+                <span><b>Prioritas 2</b> · Catatan Ringan</span>
+              </div>
+              <span class="ladder-arrow">›</span>
+              <div class="ladder-step" style="border-color: var(--status-k1); background: var(--status-k1-bg);">
+                <span class="label hijau"><i class="ri-checkbox-circle-line"></i> K1</span>
+                <span><b>Prioritas 1</b> · Siap Pakai</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 style="margin: 0 0 10px; font-weight: 800;">Daftar Status Kesimpulan</h4>
+          <div id="tabel-kesimpulan"></div>
+        </div>
+      </div>
+
+      <!-- 10 Indikator Masukan -->
+      <div class="card-box">
+        <div class="card-box-body">
+          <h4 style="margin: 0 0 6px; font-weight: 800;">10 Indikator Fakta Masukan (I1–I10)</h4>
+          <p class="category-desc" style="margin-bottom: 14px;">Daftar parameter observasi fisik, performa, dan perangkat lunak yang diuji sebelum sesi praktikum.</p>
+          <div id="tabel-indikator"></div>
+        </div>
+      </div>
+
+      <!-- 12 Aturan IF-THEN -->
+      <div class="card-box">
+        <div class="card-box-body">
+          <h4 style="margin: 0 0 6px; font-weight: 800;">12 Basis Aturan Inferensi (R1–R12)</h4>
+          <p class="category-desc" style="margin-bottom: 14px;">Aturan IF–THEN yang dievaluasi secara forward chaining pada memori kerja.</p>
+          <div id="tabel-aturan"></div>
+        </div>
+      </div>
+
+      <!-- Sumber Pengetahuan & Rujukan -->
+      <div class="card-box">
+        <div class="card-box-body">
+          <h4 style="margin: 0 0 6px; font-weight: 800;">Sumber Pengetahuan &amp; Rujukan Ilmiah</h4>
+          <p class="category-desc" style="margin-bottom: 14px;">Akuisisi pengetahuan diperoleh dari wawancara laboran teknisi serta jurnal rujukan terakreditasi:</p>
+          <ol id="daftar-sumber" class="sumber"></ol>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         HALAMAN 3: PENGUJIAN AKURASI & SKENARIO UJI
+         ========================================================================= -->
+    <section id="tab-pengujian" class="panel-tab" aria-labelledby="judul-halaman">
+      
+      <div class="test-hero-card">
+        <div class="test-hero-info">
+          <h2>Evaluasi &amp; Validasi Forward Chaining</h2>
+          <p>Pengujian 10 skenario uji (kasus normal, batas spesifikasi, konflik prioritas, masukan tanpa aturan, dan data tidak valid) untuk memverifikasi konsistensi inferensi sistem pakar.</p>
+        </div>
+        <div id="ringkasan-uji" class="ringkasan-uji" aria-live="polite"></div>
+      </div>
+
+      <div class="card-box">
+        <div class="card-box-body">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <div>
+              <h4 style="margin: 0 0 4px; font-weight: 800;">Matriks Hasil Pengujian (10 Skenario)</h4>
+              <p class="category-desc">Setiap skenario dievaluasi langsung oleh mesin inferensi dan diverifikasi terhadap harapan pakar.</p>
+            </div>
+            <button type="button" class="btn-ghost-sm" id="btn-retest" onclick="window.KOMPAK_APP_RETEST &amp;&amp; window.KOMPAK_APP_RETEST()">
+              <i class="ri-refresh-line"></i> Jalankan Ulang
+            </button>
+          </div>
+          <div id="tabel-uji"></div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       TOAST NOTIFICATION & FOOTER
+       ========================================================================= -->
+  <div id="toast-notice" class="toast-notice" role="alert">
+    <i class="ri-checkbox-circle-fill"></i>
+    <span class="toast-text">Tindakan berhasil!</span>
+  </div>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <span><b>KOMPAK</b> · Komputer Praktikum Analisis Kelayakan</span>
+        <span>— Tugas Proyek Kecerdasan Buatan 2026</span>
+      </div>
+      <div class="footer-authors">
+        <span>Jurusan Teknik Informatika dan Komputer · Universitas Negeri Makassar</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       SKRIP LOGIKA & APLIKASI
+       ========================================================================= -->
+  <script src="js/basis-pengetahuan.js"></script>
+  <script src="js/mesin-inferensi.js"></script>
+  <script src="js/skenario-uji.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
